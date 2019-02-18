@@ -57,6 +57,7 @@ Page({
                     }
                 }
                 console.log(this.data.recoList);
+                console.log(this.data.goodRecolist);
             }
         });
     },
