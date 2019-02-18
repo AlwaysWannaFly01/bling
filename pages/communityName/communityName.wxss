@@ -1,0 +1,36 @@
+/* pages/communityName/communityName.wxss */
+
+.weui-search-bar {
+    padding: 8px 20px;
+}
+
+.searchbar-result:before {
+    display: none;
+}
+
+.weui-cell {
+    padding: 12px 15px 12px 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.page__bd .weui-search-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+}
+
+.page__bd .weui-search-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+}
+
+.weui-search-bar .weui-search-bar__form {
+    border: none;
+    border-radius: 14px;
+    background: #eee;
+}
+
+.weui-search-bar__input {
+    color: #666;
+}

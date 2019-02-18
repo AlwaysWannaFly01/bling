@@ -1,0 +1,46 @@
+<template name="head">
+    <view class='nav' style='height: {{60}}px;line-height: {{60}}px'>
+        <view class='buy' bindtap="toIndex">
+            <view>想买房</view>
+            <view wx:if="{{selectedBuy}}">
+                <view class='line'></view>
+            </view>
+        </view>
+        <view class='rent' bindtap='rent'>
+            <view>想租房</view>
+            <view wx:if="{{selectedRent}}">
+                <view class='line'></view>
+            </view>
+        </view>
+        <view class='sell' bindtap='sell'>
+            <view>想卖房</view>
+            <view wx:if="{{selectedSell}}">
+                <view class='line'></view>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="foot">
+    <view class='tabbar'>
+        <view class='item1' bindtap='toIndex'>
+            <image class='img' src="{{selectedIndex?'/image/blingselected.png':'/image/bling.png'}}"></image>
+            <view style="{{selectedIndex?'color:#FF7C35':''}}">Bling</view>
+        </view>
+        <view class='item2' bindtap='demand'>
+            <image class='img' src="{{selectedDemand?'/image/needselected.png':'/image/need.png'}}"></image>
+            <view style="{{selectedDemand?'color:#FF7C35':''}}">需求</view>
+        </view>
+        <view class='item3' bindtap='my'>
+            <image class='img' src="{{selectedMy?'/image/myselected.png':'/image/my.png'}}"></image>
+            <view style="{{selectedMy?'color:#FF7C35':''}}">我的</view>
+        </view>
+    </view>
+</template>
+
+<template name="downloadApp">
+    <view class='loadapp'>
+        <view class='load'>Bling一下，好房来啦</view>
+        <view style='flex:1'></view>
+        <view class='download' bindtap='go'>下载APP</view>
+    </view>
+</template>

@@ -1,0 +1,44 @@
+<!-- pages/demand/demand.wxml -->
+<import src="../common/template.wxml"></import>
+<view>
+    <view>
+        <component-topnav inner-title="{{title}}" is-show-back="false"></component-topnav>
+        <view class="fbl_page">
+            <view>
+                <block wx:for="{{history}}" wx:for-item="item" wx:key="name">
+                    <view class="userInfo" data-id="{{item.id}}" data-type="{{item.type}}" bindtap="toListInfo" > 
+                        <view class="cjj_list_2">
+                            <view class="weui-flex">
+                                <view class="weui-flex__item txt1">{{item.type_title}}</view>
+                                <view wx:if="{{item.agentNum!=0&&item.isReadNum!=0&&item.type!='5'}}" class="weui-flex__item txt2" style="position:relative">
+                                    <view class="reply">有{{item.isReadNum}}个新回复</view>
+                                </view>
+                            </view>
+                            <view class="weui-flex">
+                                <view wx:if="{{item.price}}" class="weui-flex__item txt1" style="color:#666">
+                                    {{item.price}}
+                                </view>
+                                <view wx:if="{{item.price_sell}}" class="weui-flex__item txt1" style="color:#666">
+                                    {{item.price_sell}}万
+                                </view>
+                            </view>
+                            <view class="weui-flex fbl_bottom_border">
+                                <view wx:if="{{item.agentNum!=0 &&item.type!=5}}" class="weui-flex__item txt5">
+                                    已收到{{item.agentNum}}位经纪人推荐
+                                </view>
+                                <view wx:if="{{item.agentNum!=0 &&item.type==5}}" class="weui-flex__item txt5">
+                                    已匹配到{{item.agentNum}}位经纪人
+                                </view>
+                                <view wx:if="{{item.agentNum == 0}}" class="weui-flex__item txt5">
+                                    暂未收到推荐
+                                </view>
+                                <view class="weui-flex__item txt2">{{item.create_time_title}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <template is="foot" data="{{...property}}"></template>
+</view>

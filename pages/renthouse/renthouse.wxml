@@ -1,0 +1,36 @@
+<!-- pages/renthouse/renthouse.wxml -->
+<import src="../common/template.wxml"></import>
+<view class="">
+    <template is="head" data="{{...property}}" />
+    <map id='myMap' longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" polyline="{{polyline}}" show-location bindcontroltap="controltap" bindcontroltap="controltap" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" bindregionchange="" bindcallouttap="bindcallouttap" style="width:100%;height:auto;position:fixed;top:{{navheight}}px;bottom:98rpx;">
+        <cover-image src="../../image/dingwei.png" class="resetPosition" bindtap='resetPosition'></cover-image>
+        <cover-view class="form">
+            <cover-view class="budget">
+                <cover-view class='dian1'></cover-view>
+                <cover-view class='chooseBudget' bindtap='chooseBudget'>
+                    <cover-view class='text1'>选择预算</cover-view>
+                    <cover-view wx:if="{{!priceSelection}}" class='text2'>请选一个大概预算</cover-view>
+                    <cover-view wx:if="{{priceSelection}}" class='text2'>
+                        {{priceSelection}}
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class='description'>
+                <cover-view class='dian2'></cover-view>
+                <cover-view class='adddescription' bindtap='addtalking'>
+                    <cover-view class='text1'>补充说明</cover-view>
+                    <cover-view wx:if="{{!description}}" class='text2'>
+                        填写补充描述,让推荐更准哦~（选填）
+                    </cover-view>
+                    <cover-view wx:if="{{description}}" class='text2'>{{description}}</cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+        <button class='button' bindtap="sendNeed">发送需求</button>
+        <cover-view class="search" bindtap='gotosearch'>
+            <cover-image src='../../image/seacrh.png'></cover-image>
+            <cover-view>查找您理想的位置</cover-view>
+        </cover-view>
+    </map>
+    <template is="foot" data="{{...property}}"></template>
+</view>

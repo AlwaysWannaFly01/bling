@@ -1,0 +1,63 @@
+/* pages/rentpricechoose/rentpricechoose.wxss */
+
+.choose {
+    margin-top: 40rpx;
+    padding-left: 30rpx;
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.all {
+    display: flex;
+    margin-top: 15rpx;
+    flex-flow: row wrap;
+}
+
+.item {
+    width: 210rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 8rpx;
+    margin-left: 28.5rpx;
+    margin-top: 24rpx;
+    font-size: 28rpx;
+    color: #000000;
+}
+
+.btn {
+    background: -webkit-linear-gradient(left, #FF782E, #FFCE92);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FF782E, #FFCE92);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FF782E, #FFCE92);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #FF782E, #FFCE92);
+    /* 标准的语法 */
+    width: 300rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 45rpx;
+    font-size: 34rpx;
+    color: #ffffff;
+    margin-top: 150rpx;
+}
+
+.btn::after {
+    border: 0
+}
+
+.active {
+    width: 210rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border: 1px solid #FF9236;
+    border-radius: 8rpx;
+    margin-left: 28.5rpx;
+    margin-top: 24rpx;
+    font-size: 28rpx;
+    background: #FF9236;
+    color: #ffffff;
+}

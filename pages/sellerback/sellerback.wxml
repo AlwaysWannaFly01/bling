@@ -1,0 +1,59 @@
+<!-- pages/sellerback/sellerback.wxml -->
+<import src="../common/template.wxml"></import>
+<view class="page">
+    <component-topnav inner-title="{{title}}"></component-topnav>
+    <view class="cc">
+        <view class='news'>
+            <view class='type'>
+                <view class='txt1' style='margin-right:15rpx'>{{dataNews.document_new_title}}</view>
+                <view class='txt2'>{{dataNews.estate_title}}</view>
+            </view>
+            <view class='detail'>
+                <view class='txt3'>{{dataNews.info}}</view>
+            </view>
+            <view class='price'>
+                期望价格：
+                <text class='txt6'>{{dataNews.price_sell}}万</text>
+            </view>
+            <view wx:if="{{show1 && dataNews.description!=''}}" class='supply'>
+                补充说明：{{dataNews.description}}
+            </view>
+            <view class='show'>
+                <view style='flex:1'></view>
+                <view wx:if="{{show2}}" style='display:flex; align-items: center;' bindtap='clickpack'>
+                    <view class='txt8'>收起</view>
+                    <image class='retract' src='../../image/retract.png'></image>
+                </view>
+                <view wx:if="{{show3}}" style='display:flex; align-items: center' bindtap='clickspread'>
+                    <view class='txt8'>展开</view>
+                    <image class='retract' src='../../image/spread.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="list1">
+        <view class="title1" wx:if="{{recoList.length>0}}">
+            <view style="flex:1"></view>
+            <view>一</view>
+            <view class="agent">推荐经纪人</view>
+            <view>一</view>
+            <view style="flex:1"></view>
+        </view>
+        <view>
+            <block>
+                <view class="row" wx:for="{{recoList}}" wx:for-item="item" data-index="{{index}}" wx:key="name" data-id="{{item.uid}}">
+                    <image wx:if="{{item.headimg}}" src="{{item.headimg}}" class="head"></image>
+                    <image wx:else src="../../image/head.png" class="head"></image>
+                    <view style="width:516rpx">
+                        同步后
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view wx:if="{{recoList.length==0}}" style='text-align:center'>
+            <image style='width:282rpx;height:226rpx;margin-bottom:30rpx;margin-top:20rpx;' src='../../image/no.png'></image>
+            <view>暂无推荐经纪人</view>
+        </view>
+    </view>
+    <template is="downloadApp"></template>
+</view>

@@ -1,0 +1,9 @@
+<!-- pages/addtalking/addtalking.wxml -->
+<view>
+    <component-topnav inner-title="{{title}}"></component-topnav>
+    <view class="add">补充说明</view>
+    <textarea maxlength='100' class='text' value='{{description}}' placeholder="在这里对您想要的房子进行补充描述，可以让经纪人推荐更准哦~(选填)" placeholder-style="color:#999999;font-size: 14px;" bindinput='inputDescription'>
+        <text class='length'>{{num}}/100</text>
+    </textarea>
+    <button class='btn' bindtap='save'>保存并返回</button>
+</view>

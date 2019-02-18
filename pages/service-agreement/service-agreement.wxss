@@ -1,0 +1,13 @@
+/* pages/service-agreement/service-agreement.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.weui-article__p {
+    color: #999;
+}
+
+.weui-article__h3 {
+    font-weight: 600;
+}

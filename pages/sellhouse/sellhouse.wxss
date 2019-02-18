@@ -1,0 +1,117 @@
+/* pages/sellhouse/sellhouse.wxss */
+
+@import '../common/common.wxss';
+.list {
+    width: 100%;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    height: 90rpx;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.view1 {
+    width: 128rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-right: 30rpx;
+}
+
+.view2 {
+    flex: 1;
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.input {
+    flex: 1;
+    height: 90rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.view3 {
+    width: 200rpx;
+    font-size: 32rpx;
+    color: #333333;
+    margin-right: 22rpx;
+}
+
+.input1 {
+    width: 250rpx;
+    height: 90rpx;
+    font-size: 26rpx;
+    color: #999999;
+}
+
+.view4 {
+    flex: 1;
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.junjia {
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 26rpx;
+    background: #ff7c35;
+    color: #fff;
+    border-radius: 13px;
+}
+
+.view5 {
+    flex: 1;
+    font-size: 32rpx;
+    color: #333333;
+}
+
+.text {
+    width: 690rpx;
+    height: 310rpx;
+    border-radius: 10rpx;
+    background: #f6f6f6;
+    padding: 30rpx;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 30rpx;
+}
+
+.length {
+    width: 80rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+    position: absolute;
+    right: 40rpx;
+    bottom: 40rpx;
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.btn {
+    width: 500rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+    background: -webkit-linear-gradient(left, #ff782e, #ffce92);
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ff782e, #ffce92);
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ff782e, #ffce92);
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ff782e, #ffce92);
+    /* 标准的语法 */
+    font-size: 34rpx;
+    color: #ffffff;
+    /* margin-bottom: 120rpx; */
+    margin-top: 30rpx
+}
+
+.btn::after {
+    border: 0;
+}

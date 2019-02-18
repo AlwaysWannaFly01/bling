@@ -1,0 +1,4 @@
+<!-- pages/webView/webView.wxml -->
+<view>
+    <web-view bindmessage='msg' src="https://www.funbling.net/Home/XuanfangShare/download.html"></web-view>
+</view>

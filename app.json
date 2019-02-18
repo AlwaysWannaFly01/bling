@@ -1,0 +1,33 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/renthouse/renthouse",
+        "pages/sellhouse/sellhouse",
+        "pages/demand/demand",
+        "pages/my/my",
+        "component/topnav/topnav",
+        "pages/pricechoose/pricechoose",
+        "pages/addtalking/addtalking",
+        "pages/rentpricechoose/rentpricechoose",
+        "pages/communityName/communityName",
+        "pages/houseInfo/houseInfo",
+        "pages/login/login",
+        "pages/service-agreement/service-agreement",
+        "pages/sellerback/sellerback",
+        "pages/recommend/recommend",
+        "pages/webView/webView"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Bling房来啦",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    }
+}

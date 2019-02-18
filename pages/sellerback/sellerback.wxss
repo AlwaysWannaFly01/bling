@@ -1,0 +1,118 @@
+/* pages/sellerback/sellerback.wxss */
+
+@import '../common/common.wxss';
+page {
+    background-color: #f8f8f8;
+}
+
+.cc {
+    width: 720rpx;
+    margin-left: 15rpx;
+    background: #ffffff;
+    margin-top: 16rpx;
+}
+
+.news {
+    width: 720rpx;
+    margin-left: 15rpx;
+    padding: 15rpx;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+}
+
+.type {
+    display: flex;
+}
+
+.type .txt1 {
+    /* width: 215rpx; */
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 32rpx;
+    color: #333;
+}
+
+.type .txt2 {
+    width: 70rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    text-align: center;
+    background: rgba(255, 110, 95, 0.21);
+    font-size: 26rpx;
+    color: #FF6E5F;
+}
+
+.detail {
+    display: flex
+}
+
+.detail .txt4 {
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.price {
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.price .txt6 {
+    font-size: 32rpx;
+    color: #FF7C35;
+}
+
+.supply {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.show {
+    display: flex;
+    padding-right: 48rpx;
+    box-sizing: border-box;
+}
+
+.show .retract {
+    width: 24rpx;
+    height: 18rpx;
+}
+
+.show .txt8 {
+    font-size: 26rpx;
+    color: #FF7C35;
+}
+
+.list1,
+.list2 {
+    width: 720rpx;
+    margin: 15rpx auto;
+    box-sizing: border-box;
+    padding: 30rpx;
+    background: #fff;
+}
+
+.title1 {
+    display: flex;
+}
+
+.title1 .agent {
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.row {
+    display: flex;
+    margin-top: 40rpx;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 60rpx;
+    position: relative;
+}
+
+.row .head {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 24rpx;
+    border-radius: 50%;
+}

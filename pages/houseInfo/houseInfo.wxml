@@ -1,0 +1,51 @@
+<!-- pages/houseInfo/houseInfo.wxml -->
+<view>
+    <component-topnav inner-title="{{title}}"></component-topnav>
+    <view class="condition">
+        <picker value="{{index}}" range="{{decorateType}}" bindchange="binddecorate">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__rent">装修类型</view>
+                <view wx:if="{{flag}}" class="weui-cell__bd">{{decorateType[index]}}</view>
+                <view wx:else="{{!flag}}" class="weui-cell__bd">请填写装修类型</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </picker>
+        <view class='floor'>
+            <view>
+                <text decode="{{true}}">楼&emsp;&emsp;层</text>
+            </view>
+            <input bindinput='floor' value='{{floor}}' style='flex:1;text-align:center;' />
+            层|共
+            <input bindinput='floor2' value='{{floor2}}' style='flex:1;text-align:center;' />
+            层
+        </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title" style='margin-top: 16rpx;'>
+        <view class="weui-cell weui-cell_access" style='padding:14px 15px 0;'>
+            <view style='color:#666;flex:1;'>上传房屋照片</view>
+        </view>
+        <view class="weui-cell__more">确认委托关系后，经纪人可见</view>
+        <view class="weui-cell__house">
+            <view class="weui-cell__td">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles">
+                            <block wx:for="{{files}}" wx:key="*this">
+                                <view class="weui-uploader__file" style='position:relative'>
+                                    <image class="weui-uploader__img" src="{{item}}" id="{{item}}" data-index="{{index}}" bindtap="previewImage" mode="aspectFill" />
+                                    <image class="close" bindtap="deleteImg" data-index="{{index}}" data-src="{{item}}" src="https://www.funbling.net/Public/Home/images/fastrentwx/close.png" />
+                                </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__file" hidden='{{hidepic}}'>
+                            <image class='weui-uploader__img' src="https://www.funbling.net/Public/Home/images/fastrentwx/add_house.png" mode="aspectFill" bindtap="chooseImage"></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='footer'>
+        <button class='btn' bindtap='save'>保存并返回</button>
+    </view>
+</view>

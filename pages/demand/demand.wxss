@@ -1,0 +1,60 @@
+/* pages/demand/demand.wxss */
+
+@import '../common/common.wxss';
+page {
+    background-color: #f2f2f2;
+}
+
+.fbl_page {
+    padding: 10px;
+    margin-bottom: 100rpx;
+}
+
+.cjj_list_2 {
+    width: 100%;
+    height: 100%;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.userInfo {
+    height: 180rpx;
+    padding: 20rpx;
+    position: relative;
+    margin-bottom: 20rpx;
+    border-radius: 12rpx;
+    /* border-bottom: 1px solid #f6f6f6; */
+    background: #fff;
+}
+
+.txt1 {
+    color: #ff7c35;
+    font-size: 28rpx;
+}
+
+.fbl_bottom_border {
+    border-top: 1px solid #f2f2f2;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.txt2 {
+    color: #666666;
+    font-size: 28rpx;
+    text-align: right;
+}
+
+.reply {
+    width: 180rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    background: #ff7c35;
+    color: #ffffff;
+    font-size: 26rpx;
+    border-top-left-radius: 25rpx;
+    border-bottom-left-radius: 25rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 0
+}

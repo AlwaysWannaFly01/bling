@@ -1,0 +1,48 @@
+<!-- pages/sellhouse/sellhouse.wxml -->
+<import src="../common/template.wxml"></import>
+<view class="">
+    <template is="head" data="{{...property}}"></template>
+    <view class="list">
+        <view class="row" hover-class="none" bindtap='search'>
+            <view class="view1">小区名称</view>
+            <view class="view2">{{search_title?search_title:'点击输入小区名称'}}</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+        <picker mode="multiSelector" bindchange="bindHousePickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class="row" hover-class="none">
+                <view class='view1'>
+                    <text decode="{{true}}">户&emsp;&emsp;型</text>
+                </view>
+                <view wx:if="{{houseStyle}}" class='view2'>
+                    {{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}{{multiArray[2][multiIndex[2]]}}{{multiArray[3][multiIndex[3]]}}
+                </view>
+                <view wx:else="{{!houseStyle}}" class='view2'>请选择户型</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+        </picker>
+        <view class="row" hover-class="none">
+            <view class="view1">建筑面积</view>
+            <input class='input' value='{{area}}' type='number' bindinput='bindAreaInput' placeholder='请输入面积' placeholder-style='font-size:26rpx;color:#999999' />
+            <view style='font-size:30rpx;color:#666666'>㎡</view>
+        </view>
+        <view class='row'>
+            <view class='view3'>当前小区均价</view>
+            <view class='view2'>{{price_average}}元/㎡</view>
+        </view>
+        <view class='row'>
+            <view class='view1'>期望价格</view>
+            <input class='input1' value='{{expectPrice}}' placeholder='请填写您的期望售价' placeholder-style="color:#999;font-size:26rpx" />
+            <view class='view4'>万元</view>
+            <view class='junjia' bindtap='useaverageprice'>采用均价</view>
+        </view>
+        <view class="row" hover-class="none" bindtap='perfect'>
+            <view class="view5" style="width:30%">完善信息(选填)</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+        <textarea maxlength='100' class='text' value='{{description}}' placeholder="还有什么特别的说明，请写出您的需求（选填）" placeholder-style="color:#999999;font-size: 14px;" bindinput='sellDescription'>
+            <text class='length'>{{Num}}/100</text>
+        </textarea>
+        <button class='btn' bindtap='match'>匹配经纪人</button>
+    </view>
+    <template is="foot" data="{{...property}}"></template>
+</view>

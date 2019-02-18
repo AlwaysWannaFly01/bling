@@ -1,0 +1,59 @@
+<import src="../common/template.wxml"></import>
+<view>
+    <template is="head" data="{{...property}}"></template>
+    <map id='myMap' longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" controls="{{controls}}" polyline="{{polyline}}" show-location bindcontroltap="controltap" bindcontroltap="controltap" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap"
+        bindregionchange="regionChange" bindcallouttap="bindcallouttap" style="width:100%;height:auto;position:fixed;top:{{navheight}}px;bottom:98rpx;">
+        <cover-image src="../../image/dingwei.png" class="resetPosition" bindtap='resetPosition'></cover-image>
+        <cover-view class="form">
+            <cover-view class="budget">
+                <cover-view class='dian1'></cover-view>
+                <cover-view class='chooseBudget' bindtap='chooseBudget'>
+                    <cover-view class='text1'>选择预算</cover-view>
+                    <cover-view wx:if="{{!priceSelection}}" class='text2'>请选一个大概预算</cover-view>
+                    <cover-view wx:if="{{priceSelection}}" class='text2'>
+                        {{priceSelection}}
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class='description'>
+                <cover-view class='dian2'></cover-view>
+                <cover-view class='adddescription' bindtap='addtalking'>
+                    <cover-view class='text1'>补充说明</cover-view>
+                    <cover-view wx:if="{{!description}}" class='text2'>
+                        填写补充描述,让推荐更准哦~（选填）
+                    </cover-view>
+                    <cover-view wx:if="{{description}}" class='text2'>{{description}}</cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+        <button class='button' wx:if="{{ot === 2}}" bindtap="sendNeed">发送需求</button>
+        <button class='button' wx:if="{{ot === 1}}" bindgetphonenumber='getPhoneNumber'>发送需求</button>
+        <cover-view class="search" bindtap='gotosearch'>
+            <cover-image src='../../image/seacrh.png'></cover-image>
+            <cover-view>查找您理想的位置</cover-view>
+        </cover-view>
+    </map>
+    <cover-view wx:if="{{show}}" class="tankuang">
+        <cover-view class="block">
+            <cover-image src="/image/close.png" bindtap="close" class="close"></cover-image>
+            <cover-view class="tiptitle">Bling一下,好房来啦~</cover-view>
+            <cover-view class="goods">授权后找房更快哦</cover-view>
+            <cover-view>
+                <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="shouquan">
+                    开启找房新体验
+                </button>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+    <cover-view wx:if='{{sho}}' class='prompt'>
+        <cover-view class='frame'>
+            <cover-image class='img' src='../../image/postsuccess.png'></cover-image>
+            <cover-image class='close' src='../../image/close.png' bindtap='showblog'></cover-image>
+            <cover-view class='title'>发布成功!</cover-view>
+            <cover-view class='content'>已发送给符合您需求的经纪人，稍后经纪人</cover-view>
+            <cover-view class='content'>会给您推荐最合适的房源~</cover-view>
+            <button class='btn' bindtap='hid'>知道了</button>
+        </cover-view>
+    </cover-view>
+    <template is="foot" data="{{...property}}"></template>
+</view>

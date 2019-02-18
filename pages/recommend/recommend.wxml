@@ -1,0 +1,11 @@
+<!-- pages/recommend/recommend.wxml -->
+<import src="../common/template.wxml"></import>
+<view>
+    <component-topnav inner-title="{{title}}" is-show-back="true"></component-topnav>
+    <map longitude="{{position_x}}" latitude="{{position_y}}" scale="{{scale}}" markers="{{markers}}" covers="" circles="{{circles}}">
+        <cover-view style="width:100%;height:420rpx;z-index:99"></cover-view>
+        <cover-view class="custmer">{{recommend.type_title }}/{{recommend.price}}</cover-view>
+    </map>
+    <view class='shuoming'>补充说明：{{recommend.description}}</view>
+    <template is="downloadApp"></template>
+</view>

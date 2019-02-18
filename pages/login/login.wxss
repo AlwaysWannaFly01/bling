@@ -1,0 +1,111 @@
+/* pages/login/login.wxss */
+
+page {
+    background: #fff;
+}
+
+.fbl_page {
+    position: relative;
+    height: 100%;
+}
+
+.tip {
+    width: 650rpx;
+    margin-left: 50rpx;
+    font-size: 40rpx;
+    color: #2f2f2f;
+    margin-top: 100rpx;
+}
+
+.phone,
+.code {
+    width: 650rpx;
+    height: 90rpx;
+    margin-left: 50rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.phone {
+    margin-bottom: 20rpx;
+    margin-top: 80rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.phone_input,
+.code_input {
+    height: 90rpx;
+    font-size: 30rpx;
+}
+
+.phone_input {
+    flex: 5;
+}
+
+.btn {
+    margin-top: 15rpx;
+    outline: none;
+    border: none;
+    flex: 2;
+    height: 60rpx;
+    line-height: 60rpx;
+    background: #ffa14d;
+    text-align: center;
+    border-radius: 35rpx;
+    color: #fff;
+    font-size: 28rpx;
+}
+
+.txt {
+    width: 650rpx;
+    margin-left: 50rpx;
+    font-size: 28rpx;
+    margin-top: 25rpx;
+}
+
+.txt .agreement {
+    color: #ffa14d;
+}
+
+.login {
+    width: 650rpx;
+    margin-left: 50rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    margin-top: 150rpx;
+    color: #fff;
+    background: #ff9248;
+    font-size: 32rpx;
+}
+
+button[disabled]:not([type]) {
+    background-color: #ffa14d;
+    margin-top: 15rpx;
+    outline: none;
+    border: none;
+    flex: 2;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border-radius: 35rpx;
+    color: #fff;
+    font-size: 28rpx;
+}
+
+button[disabled]:not([type]).login {
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #ffa14d;
+    margin-top: 15rpx;
+    outline: none;
+    border: none;
+    flex: 2;
+    text-align: center;
+    border-radius: 35rpx;
+    color: #fff;
+    font-size: 28rpx;
+    margin-top: 150rpx;
+}

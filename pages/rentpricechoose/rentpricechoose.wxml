@@ -1,0 +1,11 @@
+<!-- pages/rentpricechoose/rentpricechoose.wxml -->
+<view>
+    <component-topnav inner-title="{{title}}"></component-topnav>
+    <view class="choose">选择预算</view>
+    <view class="all">
+        <view wx:for="{{rentPrice}}" wx:for-index="index" data-index="{{index}}" wx:key="item" class="{{choosedindex == index? 'active':'item'}}" bindtap="choosePrice">
+            {{item}}
+        </view>
+    </view>
+    <button class='btn' bindtap='save'>保存并返回</button>
+</view>
