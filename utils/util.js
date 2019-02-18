@@ -13,6 +13,7 @@ const formatNumber = n => {
     n = n.toString();
     return n[1] ? n : '0' + n;
 };
+
 function json2Form(json) {
     var str = [];
     for (var p in json) {
@@ -22,5 +23,5 @@ function json2Form(json) {
 }
 module.exports = {
     formatTime: formatTime,
-    json2Form: json2Form
+    json2Form: json2Form,
 };

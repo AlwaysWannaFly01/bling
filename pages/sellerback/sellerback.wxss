@@ -116,3 +116,39 @@ page {
     margin-right: 24rpx;
     border-radius: 50%;
 }
+
+.row .leval {
+    width: 40rpx;
+    height: 42rpx;
+}
+
+.sex {
+    width: 24rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+}
+
+.huiyuan {
+    width: 40rpx;
+    height: 42rpx;
+    margin-left: 10rpx;
+}
+
+.tet {
+    font-size: 28rpx;
+    color: #666666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.description {
+    width: 516rpx;
+    height: 110rpx;
+    border-radius: 4rpx;
+    background: #f8f8f8;
+    font-size: 28rpx;
+    color: #666666;
+    padding: 10rpx 20rpx 15rpx 20rpx;
+    box-sizing: border-box;
+}

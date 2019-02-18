@@ -45,7 +45,32 @@
                     <image wx:if="{{item.headimg}}" src="{{item.headimg}}" class="head"></image>
                     <image wx:else src="../../image/head.png" class="head"></image>
                     <view style="width:516rpx">
-                        提交到github
+                        <view style="display:flex;align-items:center">
+                            <text>{{item.realname}}</text>
+                            <image wx:if='{{item.sex == "1"}}' src="/image/boy.png" class="sex"></image>
+                            <image wx:else='{{item.sex == "0"}}' src="/image/girl.png" class="sex"></image>
+                            <image wx:if="{{item.rank==='1'}}" class='leval' src='/image/bronze1.png'></image>
+                            <image wx:if="{{item.rank==='2'}}" class='leval' src='/image/bronze2.png'></image>
+                            <image wx:if="{{item.rank==='3'}}" class='leval' src='/image/bronze3.png'></image>
+                            <image wx:if="{{item.rank==='4'}}" class='leval' src='/image/silver1.png'></image>
+                            <image wx:if="{{item.rank==='5'}}" class='leval' src='/image/silver2.png'></image>
+                            <image wx:if="{{item.rank==='6'}}" class='leval' src='/image/silver3.png'></image>
+                            <image wx:if="{{item.rank==='7'}}" class='leval' class='leval' src='/image/gold1.png'></image>
+                            <image wx:if="{{item.rank==='8'}}" class='leval' src='/image/gold2.png'></image>
+                            <image wx:if="{{item.rank==='9'}}" class='leval' src='/image/gold3.png'></image>
+                            <image wx:if="{{item.rank==='10'}}" class='leval' src='/image/brilliant1.png'></image>
+                            <image wx:if="{{item.rank==='11'}}" class='leval' src='/image/brilliant2.png'></image>
+                            <image wx:if="{{item.rank==='12'}}" class='leval' src='/image/brilliant3.png'></image>
+                            <image class='huiyuan' wx:if="{{item.vipAuth==='1'}}" src='/image/huiyuan1.png'></image>
+                            <image class='huiyuan' wx:if="{{item.vipAuth==='2'}}" src='/image/huiyuan.png'></image>
+                            <image class='huiyuan' wx:if="{{item.vipAuth==='2'}}" src='/image/bao.png'></image>
+                            <image class='huiyuan' wx:if="{{item.approve==='7'}}" src='/image/zheng.png'></image>
+                        </view>
+                        <view class='tet'>
+                            信用分 {{item.creditScore.score}}|{{item.companyInfo.company}}
+                        </view>
+                        <view class='tet'>重点小区：{{item.community}}</view>
+                        <view class='description'>“{{item.description}}”</view>
                     </view>
                 </view>
             </block>
