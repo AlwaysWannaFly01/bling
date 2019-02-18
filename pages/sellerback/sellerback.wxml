@@ -45,7 +45,7 @@
                     <image wx:if="{{item.headimg}}" src="{{item.headimg}}" class="head"></image>
                     <image wx:else src="../../image/head.png" class="head"></image>
                     <view style="width:516rpx">
-                        同步后
+                        提交到github
                     </view>
                 </view>
             </block>
